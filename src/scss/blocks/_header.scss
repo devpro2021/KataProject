@@ -1,0 +1,89 @@
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 18px 16px;
+    background-color: $white;
+  }
+  &__btn {
+    margin-left: 21px;
+    display: flex;
+  }
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 16px;
+}
+
+.divider {
+  width: 1px;
+  height: 32px;
+  background: $background-color;
+  border-radius: 2px;
+  &--left {
+    display: none;
+  }
+}
+.repair-btn,
+.check-btn,
+.menu-burger {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.menu-burger:hover,
+.repair-btn:hover,
+.check-btn:hover {
+  opacity: 0.7;
+}
+.contacts__call:hover,
+.contacts__chat:hover,
+.contacts__profile:hover {
+  opacity: 0.7;
+}
+.contacts__call,
+.contacts__chat,
+.contacts__profile {
+  width: 40px;
+  height: 40px;
+  border: none;
+  transition: all 0.3s ease;
+}
+.contacts__call {
+  background: transparent url("../img/icons/call.svg");
+}
+.contacts__chat {
+  background: transparent url("../img/icons/chat.svg");
+}
+.contacts__profile {
+  background: transparent url("../img/icons/profile.svg");
+}
+.menu-burger {
+  background-image: url(../img/icons/burger.svg);
+  transition: opacity 0.3s;
+}
+
+.repair-btn {
+  background-image: url(../img/icons/repair.svg);
+  transition: opacity 0.3s;
+}
+.check-btn {
+  background-image: url(../img/icons/checkstatus.svg);
+  transition: opacity 0.3s;
+}
+.repair-btn + .check-btn {
+  margin-left: 16px;
+}
+.header__contacts {
+  display: none;
+}
+
+.contacts__call-img,
+.contacts__chat-img,
+.contacts__profile-img {
+  transition: opacity 0.3s;
+}

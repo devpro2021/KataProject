@@ -1,0 +1,26 @@
+.footer {
+  border-top: 1px solid $line-color;
+  text-align: center;
+  padding: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "TT Lakes Medium";
+  opacity: 0.72;
+  color: $gray-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.footer__privacy-policy {
+  margin: 16px auto;
+}
+
+.company {
+  margin-top: 0;
+}
+.copyright,
+.info {
+  margin-bottom: 0;
+}

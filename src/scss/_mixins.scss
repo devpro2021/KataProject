@@ -1,0 +1,145 @@
+%btn {
+  width: 40px;
+  height: 40px;
+  background: $button-color;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+%close-btn {
+  @extend %btn;
+  &::before,
+  &::after {
+    content: "";
+    width: 21px;
+    height: 2px;
+    background-color: $white;
+    top: 45%;
+    left: 25%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+%btn-w-text {
+  font-family: "TT Lakes Bold";
+  font-weight: 700;
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 24px;
+  color: $white;
+  border: none;
+  border-radius: 16px;
+  background-color: $button-color;
+  padding: 6px 38px 6px 16px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 10px;
+    background-image: url(../img/icons/dropdown.svg);
+    top: 12px;
+    right: 18px;
+  }
+}
+%decore-line {
+  width: 4px;
+  height: 40px;
+  background: $accent-border-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 25% 100% 100% 25%;
+}
+
+%link-font {
+  font-family: "TT Lakes Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+%main-title {
+  font-size: 28px;
+  line-height: 40px;
+  padding-left: 16px;
+  letter-spacing: -0.6px;
+  color: $main-color;
+  position: relative;
+  font-family: "TT Lakes Bold", sans-serif;
+  font-weight: 700;
+  &::before {
+    content: "";
+    @extend %decore-line;
+  }
+}
+%slide {
+  box-sizing: border-box;
+  width: 240px;
+  height: 72px;
+  background: $white;
+  border: 1px solid $background-color;
+  border-radius: 6px;
+  position: relative;
+  padding: 16px;
+  transition: all 0.3s ease;
+  &:hover::after {
+    opacity: 0.7;
+  }
+}
+
+%links-arrow {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: $main-color;
+  position: relative;
+  padding-left: 48px;
+  font-family: "TT Lakes Medium", sans-serif;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  &::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    background: url("../img/icons/arrow-down.svg") no-repeat center center;
+  }
+}
+
+%slider-link {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background-image: url("../img/icons/go.svg");
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

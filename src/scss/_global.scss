@@ -1,0 +1,39 @@
+body {
+  font-family: "TT Lakes Regular", sans-serif;
+  background-color: $background-service-color;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+}
+.title {
+  font-family: "TT Lakes Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $gray-color;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hide {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.section-header {
+  background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
+  border-top: 1px solid $line-color;
+  padding: 14px 16px;
+}
+
+[type="button"] {
+  cursor: pointer;
+}

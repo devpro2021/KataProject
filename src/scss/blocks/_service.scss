@@ -1,0 +1,83 @@
+.service__title {
+  @extend %main-title;
+}
+
+.service {
+  background: $background-service-color;
+
+  &__links {
+    display: none;
+  }
+  &__header {
+    padding-top: 24px;
+    margin-bottom: 24px;
+  }
+  &__brand {
+    width: 100%;
+    margin-top: 16px;
+  }
+  &__brand-img {
+    width: 100%;
+    min-height: 176px;
+    object-fit: fill;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__info-text {
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding: 0 16px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    font-family: "TT Lakes Regular", sans-serif;
+    font-weight: 400;
+    &:last-child {
+      display: none;
+      margin-bottom: 0;
+    }
+    &-link {
+      @extend %links-arrow;
+      max-width: 150px;
+    }
+  }
+}
+.menu {
+  margin-bottom: 16px;
+  padding-left: 16px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  &__item {
+    padding: 6px 10px 5px 15px;
+    border-radius: 6px;
+    margin-right: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__item:hover {
+    background: $white;
+    border: 2px solid $accent-borderHover-color;
+    display: inline-block;
+  }
+  &__link {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $gray-color;
+    display: block;
+    width: max-content;
+    font-family: "TT Lakes Medium", sans-serif;
+    font-weight: 500;
+  }
+}

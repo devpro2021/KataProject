@@ -1,0 +1,120 @@
+.mobile-menu,
+.mobile-menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.mobile-menu {
+  &-overlay {
+    cursor: pointer;
+    z-index: 99;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+  }
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  transition: all 0.3s ease;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    padding: 18px 16px 32px 0;
+    width: 100%;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+      16px 0px 52px rgba(14, 24, 80, 0.2);
+    background-color: $white;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+    padding-left: 16px;
+  }
+  &__close-btn {
+    @extend %close-btn;
+  }
+  &__search-btn {
+    @extend %btn;
+    background: $button-color url(../img/icons/search.svg) no-repeat center
+      center;
+  }
+  &__list {
+    flex: 1 0 auto;
+    padding-left: 16px;
+  }
+  &__item + .mobile-menu__item {
+    margin-top: 30px;
+  }
+  &__item {
+    position: relative;
+    transition: all 0.3s;
+  }
+  &__link {
+    font-family: "TT Lakes Medium";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $main-color;
+    &::before {
+      content: "";
+      @extend %decore-line;
+      top: -5px;
+      left: -16px;
+      opacity: 0;
+    }
+    &:hover,
+    &:focus {
+      color: $gray-color;
+    }
+    &:focus::before,
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+  &__footer {
+    margin-top: 30px;
+    justify-self: end;
+    padding-left: 24px;
+  }
+  &__footer p + p {
+    margin-top: 12px;
+  }
+  &__contacts {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}
+
+.email,
+.tel {
+  @extend %link-font;
+  color: $main-color;
+}
+
+.tel {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.langs {
+  display: flex;
+  margin-top: 8px;
+  width: 90px;
+  justify-content: space-between;
+  &__item {
+    @extend %link-font;
+    color: $main-color;
+    transition: all 0.3s;
+    &:hover {
+      color: $gray-color;
+    }
+  }
+}

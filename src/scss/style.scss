@@ -1,0 +1,21 @@
+@import "normalize";
+@import "fonts";
+@import "vars";
+@import "mixins";
+@import "global";
+@import "../../node_modules/swiper/swiper.scss";
+//HEADER START
+@import "./blocks/mobile-menu";
+@import "./blocks/header";
+//HEADER END
+
+//MAIN START
+@import "main";
+//MAIN END
+
+//FOOTER START
+@import "footer";
+
+//FOOTER END
+@import "./blocks/popup";
+@import "media";

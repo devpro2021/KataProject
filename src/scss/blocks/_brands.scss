@@ -1,0 +1,64 @@
+@import "../../node_modules/swiper/modules/pagination/pagination.scss";
+
+.brands {
+  padding-top: 24px;
+  &__body {
+    padding: 16px 0 21px 16px;
+  }
+  &-slide__link {
+    @extend %slider-link;
+  }
+  &-slide__item {
+    align-items: center;
+  }
+  &-slide__img {
+    max-width: 128px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
+}
+.btn-open {
+  display: none;
+  @extend %links-arrow;
+  &::before {
+    left: 27px;
+  }
+}
+.swiper {
+  box-sizing: border-box;
+  height: 105px;
+  width: 100%;
+  margin: 0;
+  &-slide {
+    &__link {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &__item {
+      display: flex;
+      @extend %slide;
+    }
+  }
+  &-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background-color: $bullet-color;
+    &-active {
+      background-color: $bullet-color-active;
+    }
+  }
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  left: 6px;
+}
+.swiper.block-show {
+  height: auto;
+  margin-bottom: 0;
+}
