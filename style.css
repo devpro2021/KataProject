@@ -1,3 +1,4 @@
+@use "sass:math";
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -264,7 +265,8 @@ template {
     width: 8px;
     height: 10px;
     background-image: url(./static/dropdown.svg);
-    top: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     right: 18px; }
 
 .service__title::before, .popup__title::before, .mobile-menu__link::before {
@@ -923,10 +925,12 @@ body {
   height: 105px;
   width: 100%;
   margin: 0; }
-  .swiper-slide__link:hover {
-    opacity: 0.7; }
-  .swiper-slide__item {
-    display: flex; }
+  .swiper-slide {
+    width: auto; }
+    .swiper-slide__link:hover {
+      opacity: 0.7; }
+    .swiper-slide__item {
+      display: flex; }
   .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -988,9 +992,6 @@ body {
   margin-right: 16px;
   height: 235px;
   margin-bottom: 10px; }
-
-.pricing-slide.swiper-slide-active {
-  margin-right: 16px; }
 
 .pricing-slider__item {
   height: 200px;
@@ -1244,6 +1245,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; }
+  .swiper-slide {
+    width: 100%; }
   .swiper-pagination {
     display: none; }
   .tech__header {
