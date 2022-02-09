@@ -17,6 +17,3 @@ switchMenu();
 switchPopup();
 //open blocks
 openBlock();
-
-let ps = document.querySelectorAll(".btn-open::before");
-console.log(ps);
