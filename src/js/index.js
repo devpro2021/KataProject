@@ -10,13 +10,12 @@ import {
 import { popups, popupOverlay, contacts, switchPopup } from "./popup";
 import { brandsBlock, techBlock, openBtns, openBlock } from "./block-open";
 //swiper
+window.addEventListener("resize", switchSlider);
 switchSlider();
+
 //mobileMenu
 switchMenu();
 //popup
 switchPopup();
 //open blocks
 openBlock();
-
-let ps = document.querySelectorAll(".btn-open::before");
-console.log(ps);
