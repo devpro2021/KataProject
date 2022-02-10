@@ -10,7 +10,8 @@ import {
 import { popups, popupOverlay, contacts, switchPopup } from "./popup";
 import { brandsBlock, techBlock, openBtns, openBlock } from "./block-open";
 //swiper
-window.addEventListener("resize", switchSlider);
+
+window.onresize = switchSlider;
 switchSlider();
 
 //mobileMenu
