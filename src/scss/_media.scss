@@ -44,7 +44,7 @@
       margin-right: 33px;
     }
     &__info-text {
-      height: 160px;
+      height: 165px;
       padding: 0 8px;
     }
     &__text {
@@ -56,7 +56,7 @@
       }
       &-link {
         padding-left: 41px;
-        margin-top: 8px;
+        margin-top: 3px;
         &::before {
           left: 9px;
         }
@@ -378,6 +378,9 @@
   .header {
     display: none;
   }
+  .wrapper {
+    padding-left: 300px;
+  }
   .body-wrapper {
     display: flex;
     justify-content: center;
@@ -389,7 +392,7 @@
   }
 
   .mobile-menu {
-    position: static;
+    position: fixed;
     display: block;
     opacity: 1;
     transform: translateX(0);
@@ -405,7 +408,7 @@
     flex: 0 0 auto;
   }
   .mobile-menu__footer {
-    margin-top: 240px;
+    margin-top: 165px;
     margin-bottom: auto;
   }
   .mobile-menu__body {
