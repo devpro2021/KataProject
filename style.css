@@ -1454,7 +1454,7 @@ body {
     display: block;
     opacity: 1;
     transform: translateX(0);
-    height: initial; }
+    height: 100%; }
   .mobile-menu-overlay {
     display: none; }
   .mobile-menu__close-btn {
