@@ -528,13 +528,13 @@ body {
 
 .mobile-menu,
 .mobile-menu-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100%; }
+  height: 100vh; }
 
 .mobile-menu {
-  width: 100vw;
+  width: 320px;
   height: 100vh;
   z-index: 100;
   transition: all 0.3s ease; }
@@ -546,8 +546,7 @@ body {
   .mobile-menu__body {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    overflow-y: auto;
+    height: 100vh;
     padding: 18px 16px 32px 0;
     width: 100%;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
@@ -597,7 +596,8 @@ body {
 
 .email,
 .tel {
-  color: #1b1c21; }
+  color: #1b1c21;
+  display: inline-block; }
 
 .tel {
   font-weight: bold;
@@ -612,7 +612,10 @@ body {
   justify-content: space-between; }
   .langs__item {
     color: #1b1c21;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    border: none;
+    background-color: transparent;
+    padding: 0; }
     .langs__item:hover {
       color: #7e7e82; }
 
@@ -739,6 +742,8 @@ body {
     justify-content: space-between;
     overflow-x: auto;
     padding-bottom: 10px; }
+    .menu__list::-webkit-scrollbar {
+      display: none; }
   .menu__item {
     padding: 6px 10px 5px 15px;
     border-radius: 6px;
@@ -1199,7 +1204,7 @@ body {
     max-width: 328px;
     margin-right: 33px; }
   .service__info-text {
-    height: 160px;
+    height: 165px;
     padding: 0 8px; }
   .service__text {
     margin-bottom: 20px;
@@ -1209,7 +1214,7 @@ body {
       margin-bottom: 0; }
     .service__text-link {
       padding-left: 41px;
-      margin-top: 8px; }
+      margin-top: 3px; }
       .service__text-link::before {
         left: 9px; }
   .service__brand {
@@ -1435,6 +1440,8 @@ body {
 @media (min-width: 1440px) {
   .header {
     display: none; }
+  .wrapper {
+    padding-left: 300px; }
   .body-wrapper {
     display: flex;
     justify-content: center;
@@ -1443,7 +1450,7 @@ body {
   .service__wrapper {
     padding: 18px 0 18px 25px; }
   .mobile-menu {
-    position: static;
+    position: fixed;
     display: block;
     opacity: 1;
     transform: translateX(0);
@@ -1455,7 +1462,7 @@ body {
   .mobile-menu__list {
     flex: 0 0 auto; }
   .mobile-menu__footer {
-    margin-top: 240px;
+    margin-top: 165px;
     margin-bottom: auto; }
   .mobile-menu__body {
     width: 300px;
